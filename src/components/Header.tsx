@@ -2,7 +2,7 @@ import Link from "next/link";
 
 function Header() {
   return (
-    <div className=" mt-8 fixed top-1 z-40 mb-8 flex justify-center items-center w-[100%] ">
+    <div className=" mt-8 fixed top-[0.2rem] z-40 mb-8 flex justify-center items-center w-[100%] ">
       <div className="glass flex items-center p-4 w-[90%] border-solid border-[#26222D] border-2 h-[13vh] rounded-lg">
         <div className="w-[40%] font-[600] text-[#AE0D61] text-[20px]">IDEATEX</div>
         <div className="flex justify-end items-center gap-6 w-[60%]">

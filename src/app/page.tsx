@@ -4,6 +4,15 @@ import CountdownTimer from "@/components/CountdownTimer";
 import Heading from "@/components/Heading";
 import TicketInfo from "@/components/Registration";
 import Button from "@/components/Button";
+import MovingText from "@/components/MovingText";
+import EventCard from "@/components/EventCard";
+import { Guitar } from "lucide-react";
+import Schedule from "@/components/Schedule";
+import Sponsers from "@/components/Sponsers";
+import ScrollingGallery from "@/components/Scrolling-Gallery";
+import FAQSection from "@/components/Faq";
+import PromoBanner from "@/components/OffBanner";
+import Maps from "@/components/Maps";
 
 export default function Home() {
   return (
@@ -17,7 +26,7 @@ export default function Home() {
         <Hero />
         <CountdownTimer />
         <div className="w-full flex justify-center items-center">
-          <div className="flex flex-col justify-center w-[80%]">
+          <div className="flex flex-col justify-center w-[85%]">
             <div className="h-[80vh]">
               <Heading top="Ticket" med="IdeaTex" last="REGISTRATION" />
               <TicketInfo />
@@ -26,7 +35,7 @@ export default function Home() {
         </div>
 
         <div className="w-full flex justify-center items-center">
-          <div className="flex flex-col justify-center w-[80%]">
+          <div className="flex flex-col justify-center w-[85%]">
             <div className="h-[80vh] flex items-center">
               <div className="w-[50%] ">
                 <div>
@@ -40,18 +49,104 @@ export default function Home() {
                     Don't miss this extraordinary celebration of music and
                     create memories that will last a lifetime.
                   </div>
-                  <Button/>
+                  <Button />
                 </div>
               </div>
               <div className="flex justify-center items-center w-[50%]">
-            <div className="w-[80%] rounded-lg m-8 h-[60vh] bg-white shadow-custom "></div>
-                
+                <div className="w-[80%] rounded-lg m-8 h-[60vh] bg-white shadow-custom "></div>
               </div>
-
             </div>
-
           </div>
         </div>
+
+        <div className="h-[40vh] flex items-center">
+          <MovingText />
+        </div>
+
+        <div className="w-full flex justify-center items-center">
+          <div className="flex flex-col justify-center w-[85%]">
+            <div className="h-[100vh] flex flex-col justify-center">
+              <div className="w-[100%] flex items-end ">
+                <div className="w-[60%]">
+                  <Heading top="Why IdeaTex?" med="Simply" last="EXTRAORIDINARY" />
+                </div>
+
+                <div className="text-[16px] w-[40%] text-right align-bottom text-[#838490]">
+                  Immerse in mesmerizing performances,vibrant soundscapes,and
+                  interactive art at our music extravaganza. Experience a
+                  festival atmosphere like no other, where unforgettable
+                  moments.
+                </div>
+              </div>
+              <div className=" flex items-center w-[100%] gap-6 justify-center mt-12">
+                <EventCard
+                  icon={<Guitar className="w-16 h-16" />}
+                  title="Main Stage Extravaganza"
+                  description="Experience a diverse array of musical genres of talented artists."
+                />
+
+                <EventCard
+                  icon={<Guitar className="w-16 h-16" />}
+                  title="Main Stage Extravaganza"
+                  description="Experience a diverse array of musical genres of talented artists."
+                />
+
+                <EventCard
+                  icon={<Guitar className="w-16 h-16" />}
+                  title="Main Stage Extravaganza"
+                  description="Experience a diverse array of musical genres of talented artists."
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div className="w-full flex justify-center items-center">
+          <div className="flex flex-col justify-center w-[85%]">
+            <div className=" flex flex-col justify-center">
+           <Schedule/>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div className="w-full flex justify-center items-center">
+          <div className="flex flex-col h-[100vh] justify-center w-[90%]">
+           <Sponsers/>
+          </div>
+        </div>
+
+
+        <div className="w-full flex justify-center items-center">
+          <div className="flex flex-col h-[80vh] justify-center w-[90%]">
+           <ScrollingGallery/>
+          </div>
+        </div>
+
+
+        <div className="w-full flex justify-center items-center">
+          <div className="flex flex-col h-[80vh] justify-center w-[90%]">
+           <FAQSection/>
+          </div>
+        </div>
+
+       
+        <div className="h-[50vh] flex items-center">
+<PromoBanner />
+        </div>
+
+        <div className="w-full flex justify-center items-center">
+          <div className="flex flex-col h-[100vh] justify-center w-[90%]">
+           <Maps/>
+          </div>
+        </div>
+
+        <div className="h-[30vh] flex items-center">
+          <MovingText />
+        </div>
+
       </div>
     </div>
   );

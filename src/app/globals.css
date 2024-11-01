@@ -73,12 +73,21 @@ body {
 }
 
 .text-outline {
-  text-shadow: 1px 1px 0 rgba(255, 255, 255, 1),
-    -1px -1px 0 rgba(255, 255, 255, 1), 1px -1px 0 rgba(255, 255, 255, 1),
-    -1px 1px 0 rgba(255, 255, 255, 1), 0px 1px 0 rgba(255, 255, 255, 1),
-    0px -1px 0 rgba(255, 255, 255, 1), 1px 0px 0 rgba(255, 255, 255, 1),
-    -1px 0px 0 rgba(255, 255, 255, 1);
+  /* Existing white outline effect */
+  text-shadow: 
+    1px 1px 0 rgba(255, 255, 255, 1),
+    -1px -1px 0 rgba(255, 255, 255, 1), 
+    1px -1px 0 rgba(255, 255, 255, 1),
+    -1px 1px 0 rgba(255, 255, 255, 1), 
+    0px 1px 0 rgba(255, 255, 255, 1),
+    0px -1px 0 rgba(255, 255, 255, 1), 
+    1px 0px 0 rgba(255, 255, 255, 1),
+    -1px 0px 0 rgba(255, 255, 255, 1),
+    /* Stronger glow effect with #AD0C60 */
+    0px 0px 10px rgba(173, 12, 96, 0.8),
+    0px 0px 20px rgba(173, 12, 96, 0.6);
 }
+
 
 .text-shadow-red {
   text-shadow: 4px 4px 0 rgba(255, 0, 0, 1), 4px 4px 0 rgba(255, 0, 0, 1),
@@ -89,4 +98,68 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+.scrolling-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.moving-text {
+  display: inline-block;
+  font-size: 180px;
+  font-weight: 800;
+  padding-right: 100%; /* Adds space to the right for smooth looping */
+  animation: scroll 80s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(40%);
+  }
+}
+
+/* styles.css */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+
+/* globals.css or styles.css */
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-second {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  display: flex;
+  gap: 1.5rem;
+  animation: scroll 20s linear infinite;
+}
+
+.animate-scroll-second {
+  display: flex;
+  gap: 1.5rem;
+  animation: scroll-second 25s linear infinite;
 }

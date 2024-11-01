@@ -1,4 +1,10 @@
-function Heading({ top, med, last }) {
+type HeadingProps = {
+  top: string;
+  med: string;
+  last: string;
+};
+
+function Heading({ top, med, last }: HeadingProps) {
   return (
     <div className="flex group flex-col space-y-0">
       <div className="flex items-center">

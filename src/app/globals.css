@@ -103,23 +103,23 @@ body {
   overflow: hidden;
   white-space: nowrap;
 }
-
-.moving-text {
-  display: inline-block;
-  font-size: 180px;
-  font-weight: 800;
-  padding-right: 100%; /* Adds space to the right for smooth looping */
-  animation: scroll 80s linear infinite;
-}
-
-@keyframes scroll {
+@keyframes scrolll {
   0% {
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(40%);
+    transform: translateX(-100%);
   }
 }
+
+.moving-text {
+  display: flex;
+  font-size: 180px;
+  font-weight: 800;
+  animation: scrolll 80s linear infinite;
+}
+
+
 
 /* styles.css */
 .hide-scrollbar {
